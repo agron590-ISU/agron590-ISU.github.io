@@ -1,10 +1,8 @@
 name: Agron 590RD @ ISU
 description: A course in data stewardship for earth systems scientists at Iowa State University.
-url: http://agron590-ISU.github.io
-auto: true
+url: http://localhost:4000
 markdown: kramdown
 permalink: /:year/:month/:day/:title
-rdiscount extensions: [smart]
 navigation:
 - text: Home
   url: /index.html
@@ -16,4 +14,4 @@ navigation:
   url: /people.html
 - text: Blog
   url: /blog.html
-  layout: posts
+  layout: post

@@ -32,13 +32,16 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
+              {% assign url = page.url | append: ".html" %}
               {% for link in site.navigation %}
       				  {% assign current = nil %}
-      				  {% if page.url == link.url or page.layout == link.layout or page.post == link.text %}
-      					  {% assign current = 'current' %}
+      				  {% if link.url == url or page.layout == link.layout or page.post == link.text %}
+      					  {% assign current = 'active' %}
+      					{% elsif page.url == "/" and link.url == "/index.html" %}
+      					  {% assign current = 'active' %}
       				  {% endif %}
-      				  <li class="{% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
-      					<a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a>
+      				  <li class="{{ current }}">
+      					<a href="{{ link.url }}">{{ link.text }}</a>
       				  </li>
       				{% endfor %}
             </ul>
