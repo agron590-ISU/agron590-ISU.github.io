@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A course in data stewardship for earth systems scientists at Iowa State University.">
+    <meta name="author" content="Andee Kaplan <ajkaplan@iastate.edu> and Ranae Dietzel <rdietzel@iastate.edu>">
+    <!-- By The original uploader was Dick107 at English Wikipedia [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons https://commons.wikimedia.org/wiki/File%3APunch-card-5081.jpg-->
+    <link rel="icon" href="{{ page.root }}images/punch_card_profile_small.png">
+
+    <title>Agron 590RD @ ISU</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ page.root }}css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ page.root }}index.html">Agron 590RD @ ISU</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              {% for link in site.navigation %}
+      				  {% assign current = nil %}
+      				  {% if page.url == link.url or page.layout == link.layout or page.post == link.text %}
+      					  {% assign current = 'current' %}
+      				  {% endif %}
+      				  <li class="{% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
+      					<a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a>
+      				  </li>
+      				{% endfor %}
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://bb.its.iastate.edu" target="_blank">BlackBoard</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+    {{ content }}
+      
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+  </body>
+</html>
