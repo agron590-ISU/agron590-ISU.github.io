@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+{% assign myurl = page.url | remove_first: "/" %}
+{% assign locations = myurl | split: "/" %}
+{% assign oldurl = "../../../" %}
+
+<ol class="breadcrumb">
+{% for place in locations %}
+  {% assign oldurl = oldurl | append: place %}
+  {% assign oldurl = oldurl | append: "/" %}
+  <li class={% if forloop.last %}active{% endif %}>
+    {% if forloop.last %} 
+      {{ place }}
+    {% else %}
+    <a href={{ oldurl }}>{{ place }}</a>
+    {% endif %}
+  </li>
+{% endfor %}
+</ol>
+
+{{ content }}

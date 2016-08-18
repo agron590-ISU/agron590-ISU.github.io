@@ -35,7 +35,7 @@
               {% assign url = page.url | append: ".html" %}
               {% for link in site.navigation %}
       				  {% assign current = nil %}
-      				  {% if link.url == url or page.layout == link.layout or page.post == link.text %}
+      				  {% if link.url == url or link.layout contains page.layout %}
       					  {% assign current = 'active' %}
       					{% elsif page.url == "/" and link.url == "/index.html" %}
       					  {% assign current = 'active' %}
@@ -60,7 +60,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="scripts/jquery.min.js"></script>
-    <script src="scripts/bootstrap.min.js"></script>
+    <script src="{{ page.root }}scripts/jquery.min.js"></script>
+    <script src="{{ page.root }}scripts/bootstrap.min.js"></script>
   </body>
 </html>
