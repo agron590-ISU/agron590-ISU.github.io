@@ -1,0 +1,18 @@
+---
+layout: blog
+root: ../
+---
+
+<h2>Topics</h2>
+
+{% assign now = site.time | date: '%B %d, %Y' %}
+
+<ol>
+  {% for topic in site.topics %}
+  {% assign due = topic.due-date | date: '%B %d, %Y' %}
+  <li>
+  	  <a href="{{ topic.topic }}">{{ topic.short-topic }}</a>
+  	  <span>{% if now < due %} (due {{ due }}) {% endif %}</span>
+  </li>	
+  {% endfor %}
+</ol>
