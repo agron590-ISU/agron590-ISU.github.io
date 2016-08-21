@@ -6,3 +6,8 @@ dt {
 dl {
     margin-bottom: 0;
 }
+
+dd {
+    -webkit-margin-start: 40px;
+    -moz-margin-start: 40px;
+}
