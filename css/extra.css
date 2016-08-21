@@ -1,3 +1,8 @@
+dt {
+    display: block;
+}
+
+
 dl {
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
