@@ -18,7 +18,7 @@ Weekly blog topics will be assigned, sometimes this will include readings (artic
   {% assign due = topic.due-date | date: '%B %d, %Y' %}
   <li>
   	  <a href="{{ topic.topic }}">{{ topic.short-topic }}</a>
-  	  <span>{% if now < due %} (due {{ due }}) {% endif %}</span>
+  	  <span>{% if now <= due %} (due {{ due }}) {% endif %}</span>
   </li>	
   {% endfor %}
 </ol>
