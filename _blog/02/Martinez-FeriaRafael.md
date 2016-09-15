@@ -1,6 +1,6 @@
 ---
 title: "Ten simple rules..."
-author: "Firstname Lastname"
+author: "Rafael Martinez-Feria"
 topic: "02"
 layout: post
 root: ../../../

@@ -1,6 +1,6 @@
 ---
 title: "Relational DBs are dead, long live relational DBs!"
-author: "Firstname Lastname"
+author: "Rafael Martinez-Feria"
 topic: "03"
 layout: post
 root: ../../../
