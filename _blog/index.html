@@ -9,16 +9,17 @@ Weekly blog topics will be assigned, sometimes this will include readings (artic
 
 <h2>Topics</h2>
 
-{% assign now = site.time | date: '%B %d, %Y' %}
+{% assign now = site.time | date: '%s' %}
 
 
 
 <ol>
   {% for topic in site.topics %}
   {% assign due = topic.due-date | date: '%B %d, %Y' %}
+  {% assign due_unix = topic.due-date | date: '%s' %}
   <li>
   	  <a href="{{ topic.topic }}">{{ topic.short-topic }}</a>
-  	  <span>{% if now <= due %} (due {{ due }}) {% endif %}</span>
+  	  <span>{% if now <= due_unix %} (due {{ due }}) {% endif %}</span>
   </li>	
   {% endfor %}
 </ol>
