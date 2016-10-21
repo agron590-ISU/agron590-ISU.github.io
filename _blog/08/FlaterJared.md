@@ -1,10 +1,9 @@
---
+---
 title: "Welcome to the pit of success..."
 author: "Jared Flater"
 topic: "08"
 layout: post
 root: ../../../
----
 ---
 ![](images/skeleton_tidying_jf.gif)
 
